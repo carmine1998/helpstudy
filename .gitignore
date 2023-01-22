@@ -1,0 +1,7 @@
+._.DS_Store
+composer.json
+composer.lock
+/vendor/
+src/.DS_Store
+composer.phar
+phpDocumentor.phar
