@@ -4,3 +4,4 @@ composer.lock
 src/.DS_Store
 composer.phar
 phpDocumentor.phar
+phpmd-results.txt
