@@ -1,0 +1,32 @@
+name: Static Analysis on PHP
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  PHPMD:
+    name: Run PHPMD scanning
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+    
+      - name: Install dependencies
+        uses: php-actions/composer@v6
+        with:
+          command: composer
+
+      - name: Run PHPMD
+        run: vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd-report.txt
+        continue-on-error: true
+
+      - name: Upload analysis report
+        uses: github/upload-artifact@v2
+        with:
+          name: phpmd-report
+      path: phpmd-report.txt

@@ -1,0 +1,11 @@
+{
+    "require": {
+        "slim/slim": "3.*",
+        "monolog/monolog": "^2.8"
+    }
+   ,
+    "require-dev": {
+        "phpmd/phpmd" : "@stable"
+    }
+
+}
