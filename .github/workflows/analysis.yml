@@ -18,8 +18,6 @@ jobs:
     
       - name: Install dependencies
         uses: php-actions/composer@v6
-        with:
-          command: composer
 
       - name: Run PHPMD
         run: vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd-report.txt
