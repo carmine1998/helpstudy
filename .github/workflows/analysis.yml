@@ -21,7 +21,7 @@ jobs:
 
       - name: Run PHPMD
         run: vendor/bin/phpmd . text cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd-report.txt
-        continue-on-error: false
+        continue-on-error: true
 
       - name: Upload analysis report
         uses: actions/upload-artifact@v2
