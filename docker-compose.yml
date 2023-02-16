@@ -1,3 +1,4 @@
+#si esegue l'immagine ovvero mysql e pma
 version: '3'
  
 services:
@@ -28,3 +29,7 @@ services:
       - 8081:80
 volumes:
   dbdata:
+
+
+
+
